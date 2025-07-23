@@ -2,7 +2,6 @@
 @section("content")
 <div class="container mx-auto px-4 py-8">
 
-    {{-- Mensagens de Sessão (Sucesso/Erro) --}}
     @if(session()->get('danger'))
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
             <strong class="font-bold">Erro!</strong>
@@ -39,7 +38,7 @@
                 </thead>
                 <tbody>
                     @foreach($dados as $item)
-                    <tr class="hover:bg-gray-50"> {{-- Efeito hover na linha --}}
+                    <tr class="hover:bg-gray-50">
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">{{ $item->id }}</p>
                         </td>
