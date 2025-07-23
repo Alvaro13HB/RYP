@@ -7,7 +7,6 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     @vite(['resources/js/app.js'])
     <style>
-        /* Define que o HTML e o BODY ocupem 100% da altura da viewport */
         html, body {
             height: 100%;
             margin: 0;
@@ -17,8 +16,8 @@
 <body class="flex flex-col min-h-screen">
     @component('navbar')
     @endcomponent
-    <main role='main' class="flex-grow flex items-center justify-center"> {{-- Adicionei as classes aqui! --}}
-        <div class='container mx-auto max-w-screen-lg'> {{-- Mantive o mx-auto para garantir a largura e a centralização horizontal se não estiver dentro do contexto flex total --}}
+    <main role='main' class="flex-grow flex items-center justify-center"> 
+        <div class='container mx-auto max-w-screen-lg'>
             @hasSection('content')
                 @yield('content')
             @endif
