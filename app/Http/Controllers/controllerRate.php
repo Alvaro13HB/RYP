@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rate;
+use Illuminate\Support\Facades\DB;
 
 class controllerRate extends Controller
 {
@@ -89,7 +90,7 @@ class controllerRate extends Controller
     }
 
     
-    public function procurarPessoa(){
+    public function procurarPessoa(Request $request){
         $nome = $request->input('nomePessoa');
         $dados = DB::table('rates')->select('id', 'nomePessoa', 'notaPessoa')->where(DB::raw('lower(nomePessoa)'), 'like', '%' . strtolower($nome) . '%')->get();
         return view('exibirPessoas', compact('dados'));
