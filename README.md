@@ -1,3 +1,3 @@
-## Dupla:
-# - Álvaro
-# - Pedro Cougo
+# Dupla:
+## - Álvaro
+## - Pedro Cougo
